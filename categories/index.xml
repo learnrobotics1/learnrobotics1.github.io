@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Learn Robotics Academy</title>
+    <link>learnrobotics1.github.io/categories/</link>
+    <description>Recent content in Categories on Learn Robotics Academy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="learnrobotics1.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Stemapalooza</title>
+      <link>learnrobotics1.github.io/categories/stemapalooza/</link>
+      <pubDate>Thu, 14 Jun 2018 14:55:57 -0700</pubDate>
+      
+      <guid>learnrobotics1.github.io/categories/stemapalooza/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <title>Robotics for Elementary Education - Learn Robotics Academy</title>
+    <meta name="generator" content="Hugo 0.41" />
+
+    
+    <meta name="description" content="Course documents for Learn Robotics Academy">
+    
+    <link rel="canonical" href="learnrobotics1.github.io/article/robotics-for-elementary-education/">
+    
+    <meta name="author" content="Learn Robotics">
+    
+
+    <meta property="og:url" content="learnrobotics1.github.io/article/robotics-for-elementary-education/">
+    <meta property="og:title" content="Learn Robotics Academy">
+    <meta property="og:image" content="learnrobotics1.github.ioimages/pic.png">
+    <meta name="apple-mobile-web-app-title" content="Learn Robotics Academy">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="learnrobotics1.github.ioicon.png">
+    <link rel="icon" type="image/x-icon" href="learnrobotics1.github.ioicon.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('learnrobotics1.github.iofonts/icon.eot?52m981');
+        src: url('learnrobotics1.github.iofonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+             url('learnrobotics1.github.iofonts/icon.woff?52m981')
+               format('woff'),
+             url('learnrobotics1.github.iofonts/icon.ttf?52m981')
+               format('truetype'),
+             url('learnrobotics1.github.iofonts/icon.svg?52m981#icon')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/application.css">
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/palettes.css">
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/materialize.zz.css">
+
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/highlight/monokai-sublime.css">
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu%2bMono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="learnrobotics1.github.iojavascripts/modernizr.js"></script>
+
+    
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    
+
+  </head>
+  <body class="palette-primary-green palette-accent-grey">
+
+
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Robotics for Elementary Education
+      </div>
+    </div>
+
+    
+    <div class="button button-twitter" role="button" aria-label="LinkeIn">
+      <a href="learnrobotics1.github.io/index.xml" title="RSS feed" target="_blank"><i class="fa fa-rss toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="Facebook">
+      <a href="https://www.facebook.com/learnrobotics" title="Like our Facebook Page" target="_blank"><i class="fa fa-facebook toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="Instagram">
+      <a href="https://www.instagram.com/learnrobotics" title="Follow us on Instagram" target="_blank"><i class="fa fa-instagram toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="LR Website">
+      <a href="https://www.learnrobotics.org" title="Learn Robotics Website" target="_blank"><i class="fa fa-share toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="LR Website">
+      <a href="https://www.learnrobotics.org/feedback" title="Learn Robotics Website" target="_blank"><i class="fa fa-comments icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  <a href="learnrobotics1.github.io" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="learnrobotics1.github.ioimages/pic.png">
+        </div>
+      
+      <div class="name">
+        <strong>Learn Robotics Academy <span class="version">1.0.0</span></strong>
+        
+          <br>
+          Course documents for Learn Robotics Academy
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Home" href="learnrobotics1.github.io/">
+	
+	Home
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Elementary w/ Edison" href="learnrobotics1.github.io/article/robotics-for-elementary-education/">
+	
+	Elementary w/ Edison
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="MS w/ Earthquake" href="learnrobotics1.github.io/article/earthquake-simulation/">
+	
+	MS w/ Earthquake
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="HS w/ Arduino" href="learnrobotics1.github.io/article/healthy-plant-data-lab/">
+	
+	HS w/ Arduino
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">Categories</span>
+        <span class="tags">
+            
+              <a href="learnrobotics1.github.iocategories/stemapalooza"
+                title="stemapalooza">
+                stemapalooza<sup>3</sup></a>
+            
+        </span>
+        
+
+        
+        <hr>
+        <span class="section">Tags</span>
+        <span class="tags">
+            
+              <a href="learnrobotics1.github.iotags/6-8">[6-8]</a>
+            
+              <a href="learnrobotics1.github.iotags/9-12">[9-12]</a>
+            
+              <a href="learnrobotics1.github.iotags/electronics">[electronics]</a>
+            
+              <a href="learnrobotics1.github.iotags/elementary">[elementary]</a>
+            
+              <a href="learnrobotics1.github.iotags/high-school">[high-school]</a>
+            
+              <a href="learnrobotics1.github.iotags/k-5">[k-5]</a>
+            
+              <a href="learnrobotics1.github.iotags/middle">[middle]</a>
+            
+              <a href="learnrobotics1.github.iotags/robotics">[robotics]</a>
+            
+              <a href="learnrobotics1.github.iotags/steam">[steam]</a>
+            
+        </span>
+        
+
+        
+        <hr>
+        <span class="section">About Us</span>
+
+        <ul>
+          
+          <li>
+            <a href="https://facebook.com/learnrobotics" target="_blank" title="@learnrobotics on Facebook">
+              @learnrobotics on Facebook
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://instagram.com/learnrobotics" target="_blank" title="@learnrobotics on Instagram">
+              @learnrobotics on Instagram
+            </a>
+          </li>
+          
+
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Robotics for Elementary Education </h1>
+			
+			<div>
+				Thu, Jun 14, 2018
+				
+				<br>
+				
+				
+				
+				  
+				  Category: <a href="learnrobotics1.github.iocategories/stemapalooza">STEMapalooza</a>
+				  
+				
+				
+
+				
+				
+					Tags:
+					
+					  <a href="learnrobotics1.github.iotags/robotics">[robotics]</a>
+				  
+					  <a href="learnrobotics1.github.iotags/elementary">[elementary]</a>
+				  
+					  <a href="learnrobotics1.github.iotags/k-5">[k-5]</a>
+				  
+				
+				
+
+
+			</div>
+
+      
+
+			
+
+<p><img src="learnrobotics1.github.io/images/meet edison robot drawing.png" alt="Meet Edison Robot" width="250px"/></p>
+
+<h1 id="elementary-activities-with-edison">Elementary Activities with Edison</h1>
+
+<p>Course details <br />
+<em>Learn how to program the Meet Edison robot for K-5 elementary education.</em> <br />
+Hosted by <a href="https://www.learnrobotics.org">Learn Robotics</a> <br />
+Instructor: Liz Miller <br />
+<em>All content can be used for educational purposes. Not for resale or commercial distribution without the prior authorization of Learn Robotics.</em></p>
+
+<h1 id="overview">Overview</h1>
+
+<p>Robotics combines programming, electronics, and mechanics into a device that helps us perform tasks in the real-world. We will use the affordable <a href="https://www.learnrobotics.org/product/lr-ed-training-bundle-classroom-robotics/">Meet Edison Robot</a> to complete interactive robotics labs.</p>
+
+<p><img src="http://cdn2.bigcommerce.com/server3700/64749/products/1278/images/4168/Screenshot_from_2018-01-02_11-15-43__16687.1514913759.220.220.png?c=2" alt="Meet Edison Robot" /></p>
+
+<p>Some questions to think about as you go through this lesson are:</p>
+
+<ul>
+<li>How do we develop an educational lesson using robots?</li>
+<li>What process steps do we need to take to achieve our outcome?</li>
+<li>How can we modify our lesson to cater to new and advanced learners?</li>
+</ul>
+
+<h2 id="agenda-1-hour-course">Agenda (1-hour course)</h2>
+
+<p>We&rsquo;ll follow this schedule for the class.</p>
+
+<table>
+<thead>
+<tr>
+<th>Duration</th>
+<th>Topic</th>
+<th>Duration</th>
+<th>Topic</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>15 minutes</td>
+<td><strong>Overview</strong> <br /> Hand out materials <br /> Goals <br /> Review robot features <br /> Setup app in Chrome Browser</td>
+<td>15-20 minutes</td>
+<td><strong>Lab #2</strong> <em>Sumo Wrestling Robots</em> <br /> Process Mapping <br /> Dead Reckoning <br /> Basic Sensors</td>
+</tr>
+
+<tr>
+<td>15 minutes</td>
+<td><strong>Lab #1</strong> <em>Robot Dance</em> <br /> Process Mapping <br /> Move &amp; Turn <br /> Lights &amp; Sounds <br /> Brainstorming Applications</td>
+<td>10-15 minutes</td>
+<td><strong>Wrap-Up &amp; Next Steps</strong> <br /> Feedback &amp; Raffle <br /> Summary &amp; Recap <br /> Classroom sets <br /> Learn Robotics Academy Cert</td>
+</tr>
+</tbody>
+</table>
+
+<p>Feel free to take notes. You will need a laptop computer to complete this lesson.</p>
+
+<h2 id="goals">Goals</h2>
+
+<p>In this lesson, you’ll be given the opportunity to use the Meet Edison Robot to create solutions to the Lab Activities.</p>
+
+<p>These are the goals you’ll achieve at the completion of this lesson.</p>
+
+<ol>
+<li>Learn how to program the Edison robot using Edware</li>
+<li>Understand how to develop a process map</li>
+<li>Translate process maps into code</li>
+<li>Design lesson plans for Edison that you can use in your class</li>
+</ol>
+
+<h2 id="download-the-software">Download the Software</h2>
+
+<p>You&rsquo;ll need to have the Edware App to program the Meet Edison Robot.</p>
+
+<p>Download the code here: 
+<a target="_blank" href="https://chrome.google.com/webstore/detail/edware/bbgonkdihgbjeapddfecfjfhcfegbknf?hl=en">EdWare App for Chrome</a> <i class="fa fa-external-link"></i>
+.</p>
+
+<h1 id="parts-of-the-meet-edison-robot">Parts of the Meet Edison Robot</h1>
+
+<p>Edison is compatible with LEGO™ Bricks. If you have a box of these in your classroom, it’s a great way to get students learning robotics with a familiar toy!</p>
+
+<h1 id="edware-interactive-development-environment-ide">EdWare - Interactive Development Environment (IDE)</h1>
+
+<p>We’re going to write all of our code using 
+<a target="_blank" href="https://chrome.google.com/webstore/detail/edware/bbgonkdihgbjeapddfecfjfhcfegbknf?hl=en">EdWare</a> <i class="fa fa-external-link"></i>
+. You can also write programs using Edison&rsquo;s version of Python. We recommend moving to Python once students are comfortable with typing and programming.</p>
+
+<p><img src="https://is2-ssl.mzstatic.com/image/thumb/Purple5/v4/c8/4f/29/c84f2946-bc15-3225-e6ca-ae4abccfc35f/pr_source.png/643x0w.jpg" alt="i" /></p>
+
+<p>If you&rsquo;ve ever programmed using function blocks, then EdWare will look familiar to you.</p>
+
+<h2 id="steps-to-download-code-to-your-robot">Steps to Download Code to your Robot</h2>
+
+<p>Follow these steps to get code onto the Edison:</p>
+
+<ol>
+<li>Power the Edison ON</li>
+<li>Plug the EdComm programming cable into the bottom of the robot.</li>
+<li>Plug the headphone end of the EdComm programming cable into your computer’s headphone jack.</li>
+<li>Turn the Volume Up to the HIGHEST setting on your computer.</li>
+<li>Go to the top right corner of the Edware App IDE and click ▶ Program Edison</li>
+<li>Click the Circle Button ONCE so that both LEDs are ON (not flashing)</li>
+<li>Press the “Program Edison” button on the computer Edware App IDE</li>
+<li>You should hear a buzzing noise and then a beep once the program is uploaded.</li>
+</ol>
+
+<h2 id="running-code-on-your-robot">Running Code on Your Robot</h2>
+
+<p><strong>STARTING CODE</strong>: Press the triangle button on the robot to start the code. <br />
+<strong>STOPPING CODE</strong>: Press the square button on the robot to stop the code.</p>
+
+<h2 id="command-blocks-to-control-your-robot">Command Blocks to Control Your Robot</h2>
+
+<p><img src="https://ksr-ugc.imgix.net/assets/002/276/977/6bf43b9ef952ecdfdbd5589f4ad31cef_original.png?w=680&amp;fit=max&amp;v=1405329690&amp;auto=format&amp;lossless=true&amp;s=a2dedf020b2ef57273848d202c951deb" alt="Control Blocks Edware" /></p>
+
+<ul>
+<li><strong>Control blocks</strong> provide functionality to the robot’s sensors &amp; motors</li>
+<li><strong>Read blocks</strong> allow you to receive data from the sensors</li>
+<li><strong>Data blocks</strong> use information to perform calculations</li>
+<li><strong>Flow blocks</strong> help organize the process steps your robot takes</li>
+</ul>
+
+<h2 id="how-to-use-the-control-blocks">How to Use the Control Blocks</h2>
+
+<ol>
+<li>Drag a control block into the Programming Area.</li>
+<li>Control blocks are read sequentially LEFT to RIGHT from the Black Start block to the Black End Block.</li>
+</ol>
+
+<p><br /></p>
+
+<h1 id="lab-activity-1-robot-dance-party">Lab Activity #1 <em>Robot Dance Party</em></h1>
+
+<p><img src="learnrobotics1.github.io/images/robot dance party.png" alt="Meet Edison Robot Dance Party" width="250px"/></p>
+
+<p><strong>Goal!</strong> Make your robot dance by implementing the following process:</p>
+
+<ul>
+<li>Blink Left LED 1 second, then shut off</li>
+<li>Blink Right LED 1 second, then shut off</li>
+<li>Beep for ½ second</li>
+<li>Spin Counter-Clockwise</li>
+<li>Beep 2X for ½ second</li>
+<li>Spin Clockwise</li>
+<li>Repeat</li>
+</ul>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 1</p>
+<p><p>▶ Draw a process map using arrows. <br /></p>
+
+<p>Then&hellip; <br />
+▶ Translate the process map into code using the Control Blocks in the Edware App. <br /></p>
+
+<p>▶ Test after every other step. It’s difficult to debug your code if there are multiple steps happening. If you test in increments, you can ensure that each step works the way it should!</p>
+</p>
+</div>
+
+<p><em>HINT: Click on a block in the Programming Area to open the Properties Boxes. The left box shows features of the control block. The right box gives a written description of how each block works.</em></p>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 2</p>
+<p><p>▶ Save your program. <br />
+▶ Download the program to your Edison (Click <a href="#steps-to-download-code-to-your-robot">here <i class="fa fa-arrow-up" aria-hidden="true"></i></a> if you need instructions.) <br />
+▶ Test it out &amp; compare your results to the requirements of the Robot Dance <br />
+▶ Make modifications as needed <br /></p>
+
+<p><em>What do you need to do to make your robot dance repeatedly?</em>  <br /></p>
+</p>
+</div>
+
+<p><br /></p>
+
+<h1 id="lab-activity-2-sumo-wrestling-robots">Lab Activity #2 <em>Sumo Wrestling Robots</em></h1>
+
+<p><img src="learnrobotics1.github.io/images/sumo wrestling robots.png" alt="Sumo Wrestling Robots" width="250px"/></p>
+
+<p><strong>Goal!</strong> Have your robot battle another Edison in the Wrestling Robot Challenge. Here are the requirements for this project:</p>
+
+<ul>
+<li>Keep your robot inside the playing field (i.e. stay inside the black lines)</li>
+<li>Detect the other robot in the playing field, charge after it and try to push it out of the playing field (i.e. obstacle following)</li>
+<li>Optional Style points - make the robot beep and/or light up before it charges after the other robot</li>
+</ul>
+
+<h2 id="part-a-stay-inside-the-playing-field">Part A - Stay inside the playing field!</h2>
+
+<p>We don’t want Edison leaving the wrestling ring, so we’ll have to program him to detect the boundaries (black lines). <strong>We will do this using the Infrared Line Tracker and an IF-Statement.</strong> Infrared or IR Sensors work by transmitting a beam of infrared light and receiving the amount of reflected light back. We can use this information to decide whether or not we are on a light or dark surface based on the amount of reflectance.</p>
+
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSToJmBI6jwxnmzpX-Zc5RDI89okCXVmptdfbQUHUpmMX3QBL2q" alt="" /></p>
+
+<p>Combined with an <strong>IF statement</strong> in our code, we can “check” to see which condition has been met: light surface or dark surface, and move toward or away from it accordingly.</p>
+
+<p>In the EdWare App, you can use the IF loop to check the condition of the line tracker.</p>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 3</p>
+<p>▶ Drag an If control block to the Programming Area. <br />
+▶ Then click on it to bring up its Properties Box. <br />
+▶ Select “Event Happens” &gt; Line Tracker <br />
+▶ Choose “On reflective surface” for WHITE/LIGHT surfaces or “On   non-reflective surface” for BLACK/DARK surfaces <br /></p>
+</div>
+
+<h3 id="start-your-sensors">Start Your Sensors!</h3>
+
+<p>Since we are using the line tracker sensor, we need to initialize it at the beginning of our program. We also want to make sure our program runs continuously, so we’ll bring in a loop block. All of our code for this part of the lab will go into the top branch of the loop control block.</p>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 4</p>
+<p>▶ Create a process map listing all of the steps you need to account for to keep the robot inside the wrestling ring. The first 3 steps have been listed for you below. <br /></p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Process Steps</th>
+<th>Stay inside the ring</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>Drive Forward</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Detect the line</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Stop</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>&hellip; fill in the next steps!</td>
+</tr>
+</tbody>
+</table>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 5</p>
+<p>▶ Translate your process map into robot code. Be sure to test it out after every couple control blocks to make sure it works. This program is longer, so it’ll be hard to debug once the whole code has been written. <br /></p>
+</div>
+
+<h2 id="part-b-detect-charge">Part B - Detect &amp; CHARGE!</h2>
+
+<p><img src="http://www.rfwireless-world.com/images/Infrared-sensor.jpg" alt="IR distance sensors" width="450px"/></p>
+
+<p>We’re going to write a second program to <strong>see an object and charge after it</strong>. This will simulate the robots “wrestling” as they try to push each other out of the ring. Edison has built-in Infrared (IR) Distance Sensors used to detect if an object is present. Similarly to the IR Line Tracker, we will use the left and right IR Distance Sensors to determine where the opponent is and then move towards it.</p>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 6</p>
+<p>▶ Use an IF Statement to check to see if the opponent is on the LEFT side of the robot. If so, you’ll want to move your robot to the LEFT to charge after him! <br />
+▶ Do the same for the right side. <br />
+▶ Make sure you initialize the Detect Object control block before the loop command. <br />
+▶ Create a process map listing all of the steps you need to do to detect and charge after another robot. The first 3 steps have been listed for you below.</p>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>Process Steps</th>
+<th>Charge when you see a robot</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>1</td>
+<td>Drive Forward</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>Detect the robot</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Drive Forward FAST!</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>&hellip; fill in the next steps!</td>
+</tr>
+</tbody>
+</table>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 7</p>
+<p>▶ Translate your process map into robot code. Be sure to test it out after every couple control blocks to make sure it works.  <br />
+▶ Combine your Detect &amp; Charge Code with your code from Part A. <br />
+▶ Test out this new version and make sure that both features work. Make modifications as necessary. <br /></p>
+</div>
+
+<h1 id="wrap-up-next-steps">Wrap-up &amp; Next Steps</h1>
+
+<ol>
+<li><p>Submit a REVIEW for this course on 
+<a target="_blank" href="www.learnrobotics.org/feedback">Learn Robotics</a> <i class="fa fa-external-link"></i>
+ <br /></p></li>
+
+<li><p>Take pictures &amp; videos of your robot working. Tag Us on Social Media <strong>@learnrobotics</strong> on <a href="https://www.facebook.com/learnrobotics">Facebook</a> &amp; <a href="https://www.instagram.com/learnrobotics">Instagram</a>.</p></li>
+</ol>
+
+<h1 id="lr-shop">LR Shop</h1>
+
+<p>Grab your kits &amp; gear while we&rsquo;re here!</p>
+
+<ul>
+<li>Edison Robots ($55/ea + tax)</li>
+<li>LR Merch for sale:
+
+<ul>
+<li>EST Patches ($6/ea)</li>
+<li>Botly Stickers (2 for $3)</li>
+</ul></li>
+</ul>
+
+<h1 id="resources">Resources</h1>
+
+<ol>
+<li><p>
+<a target="_blank" href="https://www.learnrobotics.org/academy">Learn Robotics Academy</a> <i class="fa fa-external-link"></i>
+ offers a LIVE ONLINE 10-hour certification for Robotics Educators using the Meet Edison Robot. New sessions are available each month. All you need is an Edison robot, a laptop, and internet access to earn your certification.</p></li>
+
+<li><p>Bring Edison to your Classroom. Learn Robotics offers class bundles with activities that you can integrate into a variety of subjects.</p></li>
+</ol>
+
+<p><img src="learnrobotics1.github.io/images/robot kits.png" alt="Meet Edison robots" width="250px"/></p>
+
+<ul>
+<li>Counting &amp; Mathematics</li>
+<li>Compose Songs &amp; Music</li>
+<li>Design an autonomous car</li>
+<li>Bring devices to life with LEGO™</li>
+</ul>
+
+<p>Contact Liz Miller if you’d like to purchase Edison for your classroom.</p>
+
+<p><a href="#">go to top <i class="fa fa-arrow-up" aria-hidden="true"></i></a></p>
+
+<p><a href="learnrobotics1.github.io
+tags/stemapalooza/">Link to the STEMapalooza 2018 courses.</a></p>
+
+
+			<aside class="copyright" role="note">
+  <br />
+  
+  &copy; 2018 Learn Robotics. All rights reserved.
+  
+  <br />
+  <sub>This website contains affiliate links, which means that if you click on a product link, we may receive a commission in return. Learn Robotics is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com.</sub>
+</aside>
+
+
+		  <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+  (function() {
+      
+      
+      
+      
+
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      var disqus_shortname = '';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="learnrobotics1.github.io/article/healthy-plant-data-lab/" title="Healthy Plant Data Lab">
+        <span class="direction">
+          Previous
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Healthy Plant Data Lab
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="learnrobotics1.github.io/article/earthquake-simulation/" title="Earthquake Simulation using Cubit STEAM kits">
+        <span class="direction">
+          Next
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              Earthquake Simulation using Cubit STEAM kits
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = '';
+      var repo_id  = '';
+    
+    </script>
+
+    <script src="learnrobotics1.github.iojavascripts/application.js"></script>
+    
+
+    
+
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+  </body>
+</html>
+

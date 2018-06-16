@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Middle on Learn Robotics Academy</title>
+    <link>learnrobotics1.github.io/tags/middle/</link>
+    <description>Recent content in Middle on Learn Robotics Academy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Jun 2018 10:55:57 -0700</lastBuildDate>
+    
+	<atom:link href="learnrobotics1.github.io/tags/middle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Earthquake Simulation using Cubit STEAM kits</title>
+      <link>learnrobotics1.github.io/article/earthquake-simulation/</link>
+      <pubDate>Thu, 14 Jun 2018 10:55:57 -0700</pubDate>
+      
+      <guid>learnrobotics1.github.io/article/earthquake-simulation/</guid>
+      <description>Earthquake Simulation using Cubit Course details Learn how to integrate electronics in your classroom using a traditional Earthquake STEM lesson. Hosted by Learn Robotics Instructor: Liz Miller All content can be used for educational purposes. Not for resale or commercial distribution without the prior authorization of Learn Robotics.
+Overview Robotics combines programming, electronics, and mechanics into a device that helps us perform tasks in the real-world. We will use the affordable Cubit STEAM Kit to complete interactive robotics labs.</description>
+    </item>
+    
+  </channel>
+</rss>

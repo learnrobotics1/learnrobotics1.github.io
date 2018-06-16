@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <title>Earthquake Simulation using Cubit STEAM kits - Learn Robotics Academy</title>
+    <meta name="generator" content="Hugo 0.41" />
+
+    
+    <meta name="description" content="Course documents for Learn Robotics Academy">
+    
+    <link rel="canonical" href="learnrobotics1.github.io/article/earthquake-simulation/">
+    
+    <meta name="author" content="Learn Robotics">
+    
+
+    <meta property="og:url" content="learnrobotics1.github.io/article/earthquake-simulation/">
+    <meta property="og:title" content="Learn Robotics Academy">
+    <meta property="og:image" content="learnrobotics1.github.ioimages/pic.png">
+    <meta name="apple-mobile-web-app-title" content="Learn Robotics Academy">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="learnrobotics1.github.ioicon.png">
+    <link rel="icon" type="image/x-icon" href="learnrobotics1.github.ioicon.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('learnrobotics1.github.iofonts/icon.eot?52m981');
+        src: url('learnrobotics1.github.iofonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+             url('learnrobotics1.github.iofonts/icon.woff?52m981')
+               format('woff'),
+             url('learnrobotics1.github.iofonts/icon.ttf?52m981')
+               format('truetype'),
+             url('learnrobotics1.github.iofonts/icon.svg?52m981#icon')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/application.css">
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/palettes.css">
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/materialize.zz.css">
+
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/highlight/monokai-sublime.css">
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu%2bMono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="learnrobotics1.github.iojavascripts/modernizr.js"></script>
+
+    
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    
+
+  </head>
+  <body class="palette-primary-green palette-accent-grey">
+
+
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Earthquake Simulation using Cubit STEAM kit
+      </div>
+    </div>
+
+    
+    <div class="button button-twitter" role="button" aria-label="LinkeIn">
+      <a href="learnrobotics1.github.io/index.xml" title="RSS feed" target="_blank"><i class="fa fa-rss toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="Facebook">
+      <a href="https://www.facebook.com/learnrobotics" title="Like our Facebook Page" target="_blank"><i class="fa fa-facebook toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="Instagram">
+      <a href="https://www.instagram.com/learnrobotics" title="Follow us on Instagram" target="_blank"><i class="fa fa-instagram toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="LR Website">
+      <a href="https://www.learnrobotics.org" title="Learn Robotics Website" target="_blank"><i class="fa fa-share toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="LR Website">
+      <a href="https://www.learnrobotics.org/feedback" title="Learn Robotics Website" target="_blank"><i class="fa fa-comments icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  <a href="learnrobotics1.github.io" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="learnrobotics1.github.ioimages/pic.png">
+        </div>
+      
+      <div class="name">
+        <strong>Learn Robotics Academy <span class="version">1.0.0</span></strong>
+        
+          <br>
+          Course documents for Learn Robotics Academy
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Home" href="learnrobotics1.github.io/">
+	
+	Home
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Elementary w/ Edison" href="learnrobotics1.github.io/article/robotics-for-elementary-education/">
+	
+	Elementary w/ Edison
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="MS w/ Earthquake" href="learnrobotics1.github.io/article/earthquake-simulation/">
+	
+	MS w/ Earthquake
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="HS w/ Arduino" href="learnrobotics1.github.io/article/healthy-plant-data-lab/">
+	
+	HS w/ Arduino
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">Categories</span>
+        <span class="tags">
+            
+              <a href="learnrobotics1.github.iocategories/stemapalooza"
+                title="stemapalooza">
+                stemapalooza<sup>3</sup></a>
+            
+        </span>
+        
+
+        
+        <hr>
+        <span class="section">Tags</span>
+        <span class="tags">
+            
+              <a href="learnrobotics1.github.iotags/6-8">[6-8]</a>
+            
+              <a href="learnrobotics1.github.iotags/9-12">[9-12]</a>
+            
+              <a href="learnrobotics1.github.iotags/electronics">[electronics]</a>
+            
+              <a href="learnrobotics1.github.iotags/elementary">[elementary]</a>
+            
+              <a href="learnrobotics1.github.iotags/high-school">[high-school]</a>
+            
+              <a href="learnrobotics1.github.iotags/k-5">[k-5]</a>
+            
+              <a href="learnrobotics1.github.iotags/middle">[middle]</a>
+            
+              <a href="learnrobotics1.github.iotags/robotics">[robotics]</a>
+            
+              <a href="learnrobotics1.github.iotags/steam">[steam]</a>
+            
+        </span>
+        
+
+        
+        <hr>
+        <span class="section">About Us</span>
+
+        <ul>
+          
+          <li>
+            <a href="https://facebook.com/learnrobotics" target="_blank" title="@learnrobotics on Facebook">
+              @learnrobotics on Facebook
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://instagram.com/learnrobotics" target="_blank" title="@learnrobotics on Instagram">
+              @learnrobotics on Instagram
+            </a>
+          </li>
+          
+
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Earthquake Simulation using Cubit STEAM kits </h1>
+			
+			<div>
+				Thu, Jun 14, 2018
+				
+				<br>
+				
+				
+				
+				  
+				  Category: <a href="learnrobotics1.github.iocategories/stemapalooza">STEMapalooza</a>
+				  
+				
+				
+
+				
+				
+					Tags:
+					
+					  <a href="learnrobotics1.github.iotags/middle">[middle]</a>
+				  
+					  <a href="learnrobotics1.github.iotags/6-8">[6-8]</a>
+				  
+					  <a href="learnrobotics1.github.iotags/steam">[STEAM]</a>
+				  
+				
+				
+
+
+			</div>
+
+      
+
+			
+
+<p><img src="learnrobotics1.github.io/images/Earthquake-Table-Cubit.png" alt="Meet Edison Robot" /></p>
+
+<h1 id="earthquake-simulation-using-cubit">Earthquake Simulation using Cubit</h1>
+
+<p>Course details <br />
+<em>Learn how to integrate electronics in your classroom using a traditional Earthquake STEM lesson.</em> <br />
+Hosted by <a href="https://www.learnrobotics.org">Learn Robotics</a> <br />
+Instructor: Liz Miller <br />
+<em>All content can be used for educational purposes. Not for resale or commercial distribution without the prior authorization of Learn Robotics.</em></p>
+
+<h1 id="overview">Overview</h1>
+
+<p>Robotics combines programming, electronics, and mechanics into a device that helps us perform tasks in the real-world. We will use the affordable <a href="https://www.learnrobotics.org/cubit">Cubit STEAM Kit</a> to complete interactive robotics labs.</p>
+
+<div class="column">
+    <img src="https://cubit.cc/wp-content/themes/cubit/images/butterfly.jpg" alt="Butterfly Project" width="200px"/>
+    <img src="https://cubit.cc/wp-content/themes/cubit/images/earthquake_table.jpg" alt="Earthquake Project" width="200px"/>
+    <img src="https://cubit.cc/wp-content/themes/cubit/images/horns.jpg" alt="Horn Project" width="200px"/>
+</div>
+
+<p>Some questions to think about as you go through this lesson are:</p>
+
+<ul>
+<li>How do we develop an educational lesson using robots?</li>
+<li>What process steps do we need to take to achieve our outcome?</li>
+<li>How can we modify our lesson to cater to new and advanced learners?</li>
+</ul>
+
+<h2 id="agenda-1-hour-course">Agenda (1-hour course)</h2>
+
+<p>We&rsquo;ll follow this schedule for the class.</p>
+
+<table>
+<thead>
+<tr>
+<th>Duration</th>
+<th>Topic</th>
+<th>Duration</th>
+<th>Topic</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>15 minutes</td>
+<td><strong>Overview</strong> <br /> Hand out materials <br /> Goals <br /> STE(A)M in the Classroom discussion <br /> Earthquake Simulator demo</td>
+<td>15-20 minutes</td>
+<td><strong>Lab #2</strong> <em>Prototype &amp; Test Earthquake-Safe Structures</em> <br /> Select Materials <br /> Build a prototype <br /> Test &amp; Modify designs</td>
+</tr>
+
+<tr>
+<td>15 minutes</td>
+<td><strong>Lab #1</strong> <em>Earthquake Safe Structure Design Challenge</em> <br /> Prep <br /> Brainstorm &amp; Plan <br /> Share Designs</td>
+<td>10-15 minutes</td>
+<td><strong>Wrap-Up &amp; Next Steps</strong> <br /> Feedback &amp; Raffle <br /> Summary &amp; Recap <br /> Classroom sets <br /> Learn Robotics Academy Cert</td>
+</tr>
+</tbody>
+</table>
+
+<p>Feel free to take notes. You will need access to the Cubit explorer kit to complete this lesson.</p>
+
+<h2 id="goals">Goals</h2>
+
+<p>In this lesson, you’ll be given the opportunity to use the Cubit explorer kit to create solutions to the Lab Activities.</p>
+
+<p>These are the goals you’ll achieve at the completion of this lesson.</p>
+
+<ol>
+<li>Learn how to teach the Engineering Design Process</li>
+<li>Understand how to teach students applied STEM</li>
+<li>Translate drawings &amp; plans into a prototype</li>
+<li>Design lesson plans that you can use in your class</li>
+</ol>
+
+<h2 id="download-the-course-guide">Download the Course Guide</h2>
+
+<p>You&rsquo;ll need to have the Edware App to program the Meet Edison Robot.</p>
+
+<p>Download the code here: 
+<a target="_blank" href="learnrobotics1.github.io/drive/cubit-earthquake.pdf">Simulating Earthquakes PDF</a> <i class="fa fa-external-link"></i>
+.</p>
+
+<p><br /></p>
+
+<h1 id="wrap-up-next-steps">Wrap-up &amp; Next Steps</h1>
+
+<ol>
+<li><p>Submit a REVIEW for this course on <a href="https://www.learnrobotics.org/feedback">Learn Robotics</a> <br /></p></li>
+
+<li><p>Take pictures &amp; videos of your robot working. Tag Us on Social Media <strong>@learnrobotics</strong> on <a href="https://www.facebook.com/learnrobotics">Facebook</a> &amp; <a href="https://www.instagram.com/learnrobotics">Instagram</a>.</p></li>
+
+<li><p>Q&amp;A</p></li>
+</ol>
+
+<p><br /></p>
+
+<h1 id="resources">Resources</h1>
+
+<ol>
+<li><p>
+<a target="_blank" href="https://www.learnrobotics.org/academy">Learn Robotics Academy</a> <i class="fa fa-external-link"></i>
+ offers a LIVE ONLINE 10-hour certification for Robotics Educators using the Meet Edison Robot. New sessions are available each month. All you need is an Edison robot, a laptop, and internet access to earn your certification.</p></li>
+
+<li><p>Bring 
+<a target="_blank" href="https://www.learnrobotics.org/cubit">Cubit</a> <i class="fa fa-external-link"></i>
+ to your Classroom. Learn Robotics offers class bundles &amp; professional training that you can integrate into a variety of subjects.</p></li>
+</ol>
+
+<p><img src="https://cubit.cc/wp-content/themes/cubit/images/loudon.jpg" alt="Cubit STEAM kit" width="255px"/>
+<img src="https://cubit.cc/wp-content/themes/cubit/images/whysteam.png" alt="Cubit STEAM kit" width="320px"/></p>
+
+<ul>
+<li>Applied Mathematics</li>
+<li>STE(A)M</li>
+<li>Electronics</li>
+<li>Robotics</li>
+<li>Easy-to-use programming interface</li>
+</ul>
+
+<p>Contact Liz Miller if you’d like to purchase Cubit for your classroom.</p>
+
+<p><a href="#">go to top <i class="fa fa-arrow-up" aria-hidden="true"></i></a></p>
+
+<p><a href="learnrobotics1.github.io
+tags/stemapalooza/">Link to the STEMapalooza 2018 courses.</a></p>
+
+
+			<aside class="copyright" role="note">
+  <br />
+  
+  &copy; 2018 Learn Robotics. All rights reserved.
+  
+  <br />
+  <sub>This website contains affiliate links, which means that if you click on a product link, we may receive a commission in return. Learn Robotics is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com.</sub>
+</aside>
+
+
+		  <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+  (function() {
+      
+      
+      
+      
+
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      var disqus_shortname = '';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="learnrobotics1.github.io/article/robotics-for-elementary-education/" title="Robotics for Elementary Education">
+        <span class="direction">
+          Previous
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Robotics for Elementary Education
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = '';
+      var repo_id  = '';
+    
+    </script>
+
+    <script src="learnrobotics1.github.iojavascripts/application.js"></script>
+    
+
+    
+
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+  </body>
+</html>
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>High School on Learn Robotics Academy</title>
+    <link>learnrobotics1.github.io/tags/high-school/</link>
+    <description>Recent content in High School on Learn Robotics Academy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Jun 2018 14:55:57 -0700</lastBuildDate>
+    
+	<atom:link href="learnrobotics1.github.io/tags/high-school/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Healthy Plant Data Lab</title>
+      <link>learnrobotics1.github.io/article/healthy-plant-data-lab/</link>
+      <pubDate>Thu, 14 Jun 2018 14:55:57 -0700</pubDate>
+      
+      <guid>learnrobotics1.github.io/article/healthy-plant-data-lab/</guid>
+      <description>Healthy Plant Data Lab using Arduino Course details Learn how to program the Arduino microcontroller to create an applied electronic device. Hosted by Learn Robotics Instructor: Liz Miller All content can be used for educational purposes. Not for resale or commercial distribution without the prior authorization of Learn Robotics.
+Overview Electronics are part of our everyday life, but how do they work? Majority of the devices that we rely on for communication, entertainment, &amp;amp; in business are built on programs, circuits, &amp;amp; sensors.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <title>Healthy Plant Data Lab - Learn Robotics Academy</title>
+    <meta name="generator" content="Hugo 0.41" />
+
+    
+    <meta name="description" content="Course documents for Learn Robotics Academy">
+    
+    <link rel="canonical" href="learnrobotics1.github.io/article/healthy-plant-data-lab/">
+    
+    <meta name="author" content="Learn Robotics">
+    
+
+    <meta property="og:url" content="learnrobotics1.github.io/article/healthy-plant-data-lab/">
+    <meta property="og:title" content="Learn Robotics Academy">
+    <meta property="og:image" content="learnrobotics1.github.ioimages/pic.png">
+    <meta name="apple-mobile-web-app-title" content="Learn Robotics Academy">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="learnrobotics1.github.ioicon.png">
+    <link rel="icon" type="image/x-icon" href="learnrobotics1.github.ioicon.png">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('learnrobotics1.github.iofonts/icon.eot?52m981');
+        src: url('learnrobotics1.github.iofonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+             url('learnrobotics1.github.iofonts/icon.woff?52m981')
+               format('woff'),
+             url('learnrobotics1.github.iofonts/icon.ttf?52m981')
+               format('truetype'),
+             url('learnrobotics1.github.iofonts/icon.svg?52m981#icon')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/application.css">
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/palettes.css">
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/materialize.zz.css">
+
+    <link rel="stylesheet" href="learnrobotics1.github.iostylesheets/highlight/monokai-sublime.css">
+    
+    
+    
+    
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu%2bMono">
+    <style>
+      body, input {
+        font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="learnrobotics1.github.iojavascripts/modernizr.js"></script>
+
+    
+
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    
+    
+
+  </head>
+  <body class="palette-primary-green palette-accent-grey">
+
+
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        Healthy Plant Data Lab
+      </div>
+    </div>
+
+    
+    <div class="button button-twitter" role="button" aria-label="LinkeIn">
+      <a href="learnrobotics1.github.io/index.xml" title="RSS feed" target="_blank"><i class="fa fa-rss toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="Facebook">
+      <a href="https://www.facebook.com/learnrobotics" title="Like our Facebook Page" target="_blank"><i class="fa fa-facebook toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="Instagram">
+      <a href="https://www.instagram.com/learnrobotics" title="Follow us on Instagram" target="_blank"><i class="fa fa-instagram toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="LR Website">
+      <a href="https://www.learnrobotics.org" title="Learn Robotics Website" target="_blank"><i class="fa fa-share toggle-button icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+    <div class="button button-twitter" role="button" aria-label="LR Website">
+      <a href="https://www.learnrobotics.org/feedback" title="Learn Robotics Website" target="_blank"><i class="fa fa-comments icon" style="font-size:26px"></i></a>
+    </div>
+    
+
+    
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+
+</header>
+
+<main class="main">
+	
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  <a href="learnrobotics1.github.io" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="learnrobotics1.github.ioimages/pic.png">
+        </div>
+      
+      <div class="name">
+        <strong>Learn Robotics Academy <span class="version">1.0.0</span></strong>
+        
+          <br>
+          Course documents for Learn Robotics Academy
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Home" href="learnrobotics1.github.io/">
+	
+	Home
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Elementary w/ Edison" href="learnrobotics1.github.io/article/robotics-for-elementary-education/">
+	
+	Elementary w/ Edison
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="MS w/ Earthquake" href="learnrobotics1.github.io/article/earthquake-simulation/">
+	
+	MS w/ Earthquake
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="HS w/ Arduino" href="learnrobotics1.github.io/article/healthy-plant-data-lab/">
+	
+	HS w/ Arduino
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">Categories</span>
+        <span class="tags">
+            
+              <a href="learnrobotics1.github.iocategories/stemapalooza"
+                title="stemapalooza">
+                stemapalooza<sup>3</sup></a>
+            
+        </span>
+        
+
+        
+        <hr>
+        <span class="section">Tags</span>
+        <span class="tags">
+            
+              <a href="learnrobotics1.github.iotags/6-8">[6-8]</a>
+            
+              <a href="learnrobotics1.github.iotags/9-12">[9-12]</a>
+            
+              <a href="learnrobotics1.github.iotags/electronics">[electronics]</a>
+            
+              <a href="learnrobotics1.github.iotags/elementary">[elementary]</a>
+            
+              <a href="learnrobotics1.github.iotags/high-school">[high-school]</a>
+            
+              <a href="learnrobotics1.github.iotags/k-5">[k-5]</a>
+            
+              <a href="learnrobotics1.github.iotags/middle">[middle]</a>
+            
+              <a href="learnrobotics1.github.iotags/robotics">[robotics]</a>
+            
+              <a href="learnrobotics1.github.iotags/steam">[steam]</a>
+            
+        </span>
+        
+
+        
+        <hr>
+        <span class="section">About Us</span>
+
+        <ul>
+          
+          <li>
+            <a href="https://facebook.com/learnrobotics" target="_blank" title="@learnrobotics on Facebook">
+              @learnrobotics on Facebook
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://instagram.com/learnrobotics" target="_blank" title="@learnrobotics on Instagram">
+              @learnrobotics on Instagram
+            </a>
+          </li>
+          
+
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>Healthy Plant Data Lab </h1>
+			
+			<div>
+				Thu, Jun 14, 2018
+				
+				<br>
+				
+				
+				
+				  
+				  Category: <a href="learnrobotics1.github.iocategories/stemapalooza">STEMapalooza</a>
+				  
+				
+				
+
+				
+				
+					Tags:
+					
+					  <a href="learnrobotics1.github.iotags/robotics">[robotics]</a>
+				  
+					  <a href="learnrobotics1.github.iotags/high-school">[high school]</a>
+				  
+					  <a href="learnrobotics1.github.iotags/9-12">[9-12]</a>
+				  
+					  <a href="learnrobotics1.github.iotags/electronics">[electronics]</a>
+				  
+				
+				
+
+
+			</div>
+
+      
+
+			
+
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKdrEUutaXF_MuUnOpV-BLxLNp739tU0aK3PdJB7MxzsR8gvtQ" alt="Arduino Uno" width="250px"/></p>
+
+<h1 id="healthy-plant-data-lab-using-arduino">Healthy Plant Data Lab using Arduino</h1>
+
+<p>Course details <br />
+<em>Learn how to program the Arduino microcontroller to create an applied electronic device.</em> <br />
+Hosted by <a href="https://www.learnrobotics.org">Learn Robotics</a> <br />
+Instructor: Liz Miller <br />
+<em>All content can be used for educational purposes. Not for resale or commercial distribution without the prior authorization of Learn Robotics.</em></p>
+
+<h1 id="overview">Overview</h1>
+
+<p>Electronics are part of our everyday life, but how do they work? Majority of the devices that we rely on for communication, entertainment, &amp; in business are built on programs, circuits, &amp; sensors.</p>
+
+<p>Some questions to think about as you go through this lesson are:</p>
+
+<ul>
+<li>What are appropriate sensors to collect the data we need?</li>
+<li>How do we use these components together with the software?</li>
+<li>What signals do we want to use to alert our user?</li>
+</ul>
+
+<h2 id="agenda-1-hour-course">Agenda (1-hour course)</h2>
+
+<p>We&rsquo;ll follow this schedule for the class.</p>
+
+<table>
+<thead>
+<tr>
+<th>Duration</th>
+<th>Topic</th>
+<th>Duration</th>
+<th>Topic</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>15 minutes</td>
+<td><strong>Overview</strong> <br /> Hand out materials <br /> Goals <br /> Review wiring <br /> Code template &amp; online simulation</td>
+<td>15-20 minutes</td>
+<td><strong>Activities</strong> <em>Healthy Plant Device</em> <br /> Lab #1 Create a program to turn on all 4 LED’s <br /> Lab #2 Use the Serial Monitor &amp; Plotter to capture Potentiometer and Photoresistor data <br /> Lab #3 LED Brightness with the Pot <br /> Lab #4 LED Brightness with the LDR</td>
+</tr>
+
+<tr>
+<td>15 minutes</td>
+<td><strong>Programming Lesson</strong> <br /> Variables <br /> Methods <br /> Serial Communication <br /> Process Mapping</td>
+<td>10-15 minutes</td>
+<td><strong>Wrap-Up &amp; Next Steps</strong> <br /> Feedback &amp; Raffle <br /> Summary &amp; Recap <br /> Classroom sets <br /> Learn Robotics Academy Cert</td>
+</tr>
+</tbody>
+</table>
+
+<p>Feel free to take notes. You will need a laptop computer to complete this lesson.</p>
+
+<h2 id="application">Application</h2>
+
+<p>You’ve been tasked to design the HEALTHY PLANT MONITOR, a sophisticated device that helps gardeners ensure the health and growth of potted plants.
+<br />
+<div class="column">
+    <img src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/256x256/plant.png" alt="Healthy Plant" width="200px"/>
+    <img src="https://www.shareicon.net/data/2016/08/18/808998_plant_512x512.png" alt="Healthy Plant" width="200px"/>
+    <img src="data:image/png;base64,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" alt="Healthy Plant" width="200px"/>
+</div></p>
+
+<p>We’ve interviewed the top gardeners in Georgia, and they’ve requested the following features:</p>
+
+<ul>
+<li>A way to know if a plant is receiving adequate light</li>
+<li>A signal when a plant is in the dark</li>
+<li>A numerical reading of how hydrated a plant is</li>
+<li>A visualization or indicator of when a plant is hydrated</li>
+</ul>
+
+<h2 id="goals">Goals</h2>
+
+<p>In this lesson, you’ll be given the opportunity to use the Learn Robotics Workbench to model your Healthy Plant Device.</p>
+
+<p>These are the goals you’ll achieve at the completion of this lesson.</p>
+
+<ol>
+<li>Learn how to communicate &amp; program an electronic controller (Arduino).</li>
+<li>Select appropriate sensors to model data</li>
+<li>Send data to output devices</li>
+<li>Receive data from input devices</li>
+<li>Use sensor data to make simple decisions</li>
+</ol>
+
+<h2 id="learn-robotics-workbench">Learn Robotics Workbench</h2>
+
+<p><img src="learnrobotics1.github.io/images/lr-workbench.png" alt="" /></p>
+
+<h2 id="download-the-software">Download the Software</h2>
+
+<p>You&rsquo;ll need to have the Arduino IDE to program the workbench.</p>
+
+<p>Download the code here: 
+<a target="_blank" href="https://arduino.cc/downloads">Arduino IDE</a> <i class="fa fa-external-link"></i>
+.</p>
+
+<p>Download the drivers here: <a href="learnrobotics1.github.io/drive/MacOS_11_or_Earlier.pkg">Mac OS 11 or EARLIER driver</a> | <a href="learnrobotics1.github.io/drive/MacOS_12_or_Later.pkg">Mac OS 12 or LATER driver</a> | <a href="learnrobotics1.github.io/drive/Windows.EXE">Windows driver</a></p>
+
+<p>We also have a simulated version of the Workbench 
+<a target="_blank" href="https://www.learnrobotics.org/workbench">here</a> <i class="fa fa-external-link"></i>
+</p>
+
+<p>Download the code template, 
+<a target="_blank" href="http://bit.ly/healthyplantcode">HealthyPlantTemplate.ino</a> <i class="fa fa-external-link"></i>
+</p>
+
+<h2 id="download-code-to-your-arduino">Download code to your Arduino</h2>
+
+<ol>
+<li>Go to Tools &gt; Board &gt; “Arduino/Genuino Uno”.</li>
+<li>Select Tools &gt; Port &gt; port that the USB cable &amp; Arduino is plugged into</li>
+</ol>
+
+<h1 id="lab-activity-1-using-led-s-as-indicators">Lab Activity #1 <strong>Using LED&rsquo;s as Indicators</strong></h1>
+
+<p><img src="https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/led.png" alt="LED" width="50px"/></p>
+
+<p>Using the Information from the Gardener’s requests, we will first want to learn how to turn on an indicator, or any LED in the workbench. When the light is ON, it’ll signal to the gardener that something happened with his/her plant.</p>
+
+<ol>
+<li>Let&rsquo;s first create an integer variable to store the LED&rsquo;s connection pin in the code</li>
+</ol>
+
+<pre><code>int red_led = 12; //where the name red_led means the value 12
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 1</p>
+<p>▶ Define integer variables for all of your LED’s, Potentiometer, button, and LDR. The pin numbers and variable names are given below.</p>
+</div>
+
+<ul>
+<li>red_led = 12</li>
+<li>yellow_led = 11 ~</li>
+<li>green_led = 10 ~</li>
+<li>white_led = 9 ~</li>
+<li>button = 2</li>
+<li>pot = A3</li>
+<li>ldr = A4</li>
+</ul>
+
+<ol>
+<li>In the <code>setup()</code> method, we need to initialize all of the variables as inputs or outputs.</li>
+</ol>
+
+<pre><code>pinMode(red_led, OUTPUT); //where the red_led is an output
+</code></pre>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 2</p>
+<p>▶ Add the pinMode methods for each device in the workbench to your setup() method (between the two curly braces). You’ll need to decide which devices are outputs and which are inputs. <em>Hint:</em> Outputs are sending something to the world, and inputs take data from the world.</p>
+</div>
+
+<ol>
+<li>To write a value to an LED, we can use the <code>digitalWrite(pin,status)</code> method. Let’s turn the Red LED ON for 1 second, then OFF for 1 second.</li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 3</p>
+<p>▶ Add the following code to your <code>loop()</code> method (between the two curly braces).</p>
+</div>
+
+<pre><code>	digitalWrite(red_led, HIGH); //turn red LED ON
+	delay(1000); //delay for 1 second or 1000 milliseconds
+	digitalWrite(red_led, LOW); //turn red LED OFF
+	delay(1000); //delay for 1 second or 1000 milliseconds
+</code></pre>
+
+<ol>
+<li><p>File &gt; Save. Then upload the code to your board.</p></li>
+
+<li><p>If everything is working, you should see your Red LED blink.</p></li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 4</p>
+<p>▶ Run the same code for all of your LED’s to make sure they’re working.</p>
+</div>
+
+<h2 id="lab-activity-2-methods-reading-displaying-data">Lab Activity #2 <strong>Methods, Reading, &amp; Displaying Data</strong></h2>
+
+<ol>
+<li>Let’s move our code out of the <code>loop()</code> and into a separate method called <code>led_blink()</code>.
+<br />
+A method is a set of procedures that allows us to reuse code for specific functionality.</li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 5</p>
+<p>▶ Copy and paste your code from loop into the new <code>led_blink()</code> method.</p>
+</div>
+
+<pre><code>void led_blink(int led, int dur){
+	 //… paste your code from loop here
+}
+</code></pre>
+
+<p>You can use input parameters to replace <code>red_led</code> and the hardcoded time value if you’d like to reuse this method for every led on the workbench.</p>
+
+<pre><code>void led_blink(int led, int dur){
+	//… paste your code from loop here
+	digitalWrite(led, HIGH); //turn input LED ON
+	delay(dur); //delay for input duration
+	digitalWrite(led, LOW); //turn input LED OFF
+	delay(dur); //delay for input duration
+}
+</code></pre>
+
+<p>Then when you want to turn on <code>red_led</code> on for 1 second, you can call this method…</p>
+
+<pre><code>led_on(red_led, 1000); //turn red_led on for 1 second
+</code></pre>
+
+<p>&hellip;rather than write those same four lines of code a bunch of times.</p>
+
+<ol>
+<li>In the <code>setup()</code> method, we need to initialize the Serial Monitor &amp; Plotter to accept communication from the Arduino.</li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 6</p>
+<p>▶ Add this line of code inside your <code>setup()</code> method.</p>
+</div>
+
+<pre><code>Serial.begin(9600); //turn on serial comm @ 9600 baud
+</code></pre>
+
+<ol>
+<li>Let’s <em>grab readings</em> from the Analog Devices and <em>store them into a reading variable</em>. This command can be used for both the Pot &amp; the LDR.</li>
+</ol>
+
+<pre><code>int pot_reading = analogRead(pot); //read the potentiometer
+int ldr_reading = analogRead(ldr); //get the value from the ldr
+</code></pre>
+
+<ol>
+<li>Next, we’ll print these values to the Serial Monitor.</li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 7</p>
+<p>▶ Add these line of code inside your <code>loop()</code> method.</p>
+</div>
+
+<pre><code>Serial.print(“Pot value: ”);
+Serial.println(pot_reading);
+delay(1000); //every second get a new reading
+</code></pre>
+
+<ol>
+<li>Test out your code!</li>
+</ol>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 8</p>
+<p>▶ Verify &amp; Upload the code to your board. <br />
+▶ Open up the Serial Monitor. Tools &gt; Serial Monitor. Or click the Magnifying Glass in the top right corner. <em>Hint: Make sure the baud rate is set to 9600 in the bottom right corner of the Serial Monitor Window.</em>  <br />
+▶ Rotate the pot.
+▶ Answer the following question.</p>
+</div>
+
+<p><strong>What numbers do you see?</strong></p>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 9</p>
+<p>▶ Use your cell phone flashlight to see the values change from the LDR. <br />
+▶ Open up the Serial Plotter. Tools &gt; Serial Plotter  <br />
+▶ Change the values of the pot and LDR by rotating the dial or exposing the LDR to light/dark.  <br />
+▶ Take a screenshot of your real-time plot.</p>
+</div>
+
+<h2 id="lab-3-using-data-to-make-decisions">Lab #3 <strong>Using Data to Make Decisions</strong></h2>
+
+<p>Download a copy of the <a href="https://bit.ly/healthyplantcode3">HealthyPlantEx3.ino code</a></p>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 10</p>
+<p>▶ Verify and upload the code to your board. <br />
+▶ Open up a Serial Monitor or Serial Plotter <br />
+▶ Rotate the potentiometer.  <br />
+▶ Answer the following questions.</p>
+</div>
+
+<p><strong>What happens?</strong>
+<br />
+<strong>How does this apply to the Healthy Plant Device?</strong></p>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 11</p>
+<p>▶ Cover the LDR with your hands. <br />
+▶ Answer the following questions.</p>
+</div>
+
+<p><strong>What happens to the workbench?</strong> <br/ >
+<strong>How does this apply to the Healthy Plant Device?</strong></p>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 12</p>
+<p>▶ Read through the code. <br />
+▶ Answer the following questions.</p>
+</div>
+
+<p><strong>What changes would you make so that the Healthy Plant Device works better for the gardener?</strong></p>
+
+<div class="admonition note">
+<p class="admonition-title">Activity 13</p>
+<p>▶ Make those changes in the code &amp; test them out. <br />
+▶ Answer the following questions.</p>
+</div>
+
+<p><strong>How did these changes improve the device?</strong>
+<br />
+<strong>What sensors or features would you add to this device for Version #2?</strong></p>
+
+<p><br /></p>
+
+<h1 id="wrap-up-next-steps">Wrap-up &amp; Next Steps</h1>
+
+<ol>
+<li><p>Submit a REVIEW for this course on 
+<a target="_blank" href="https://www.learnrobotics.org/feedback">Learn Robotics</a> <i class="fa fa-external-link"></i>
+ <br /></p></li>
+
+<li><p>Take pictures &amp; videos of your robot working. Tag Us on Social Media <strong>@learnrobotics</strong> on <a href="https://www.facebook.com/learnrobotics">Facebook</a> &amp; <a href="https://www.instagram.com/learnrobotics">Instagram</a>.</p></li>
+</ol>
+
+<h1 id="lr-shop">LR Shop</h1>
+
+<p>Grab your kits &amp; gear while we&rsquo;re here!</p>
+
+<ul>
+<li>Edison Robots ($55/ea + tax)</li>
+<li>LR Merch for sale:
+
+<ul>
+<li>EST Patches ($6/ea)</li>
+<li>Botly Stickers (2 for $3)</li>
+</ul></li>
+</ul>
+
+<h1 id="resources">Resources</h1>
+
+<ol>
+<li><p>
+<a target="_blank" href="https://www.learnrobotics.org/academy">Learn Robotics Academy</a> <i class="fa fa-external-link"></i>
+ offers a LIVE ONLINE 10-hour certification for Robotics Educators using the Meet Edison Robot. New sessions are available each month. All you need is an Edison robot, a laptop, and internet access to earn your certification.</p></li>
+
+<li><p>Bring Arduino to your Classroom. Learn Robotics recommends the following kits:</p></li>
+</ol>
+
+<p>
+<a target="_blank" href="https://amzn.to/2MwfglR">Starter Kit ($26.99)</a> <i class="fa fa-external-link"></i>
+ <br />
+Great for prototyping electronics <br /> <br />
+<a href="https://amzn.to/2MwfglR"><img src="https://images-na.ssl-images-amazon.com/images/I/91wfLG%2B85dL._SL1500_.jpg" width="200px"/></a></p>
+
+<p>
+<a target="_blank" href="https://amzn.to/2le9qcr">Arduino Robotics Kit ($69.99)</a> <i class="fa fa-external-link"></i>
+ <br />
+Affordable robotics kit. Used in the Beginner Bots Tutorials on the LR blog!<br /> <br />
+<a href="https://amzn.to/2le9qcr"><img src="https://images-na.ssl-images-amazon.com/images/I/71fJ76FzlWL._SL1500_.jpg" width="200px"/></a></p>
+
+<p>You can also <a href="https://www.learnrobotics.org/contact#appointments">contact Learn Robotics</a> to retrofit your classroom with Arduino + PD. Classroom Packs are as low as $999 with 2 hours of virtual PD.</p>
+
+<p>We&rsquo;ve also written numerous free tutorials using Arduino including the following:</p>
+
+<ul>
+<li><a href="https://www.learnrobotics.org/blog/four-steps-to-writing-an-arduino-program/">4 Steps to Writing Any Arduino Program</a></li>
+<li><a href="https://www.learnrobotics.org/blog/simple-guide-writing-arduino-program/">The Simple Guide to Writing an Arduino Program</a></li>
+<li><a href="https://www.learnrobotics.org/tag/beginner-bot/">Beginner Bots Robotics Tutorials (5 full-length lessons)</a></li>
+<li><a href="https://www.learnrobotics.org/blog/top-5-arduino-kits-worth-buying/">5 Arduino Kits worth Buying</a></li>
+<li><a href="https://www.learnrobotics.org/blog/random-led-generator-using-arduino-uno/">Random LEDs Tutorial</a></li>
+</ul>
+
+<p><a href="#">go to top <i class="fa fa-arrow-up" aria-hidden="true"></i></a></p>
+
+<p><a href="learnrobotics1.github.io
+tags/stemapalooza/">Link to the STEMapalooza 2018 courses.</a></p>
+
+
+			<aside class="copyright" role="note">
+  <br />
+  
+  &copy; 2018 Learn Robotics. All rights reserved.
+  
+  <br />
+  <sub>This website contains affiliate links, which means that if you click on a product link, we may receive a commission in return. Learn Robotics is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to amazon.com.</sub>
+</aside>
+
+
+		  <div id="disqus_thread"></div>
+<script type="text/javascript">
+
+  (function() {
+      
+      
+      
+      
+
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      var disqus_shortname = '';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+  </div>
+
+  <div class="next">
+  
+      <a href="learnrobotics1.github.io/article/robotics-for-elementary-education/" title="Robotics for Elementary Education">
+        <span class="direction">
+          Next
+        </span>
+        <div class="page">
+          <div class="stretch">
+            <div class="title">
+              Robotics for Elementary Education
+            </div>
+          </div>
+          <div class="button button-next" role="button" aria-label="Next">
+            <i class="icon icon-forward"></i>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = '';
+      var repo_id  = '';
+    
+    </script>
+
+    <script src="learnrobotics1.github.iojavascripts/application.js"></script>
+    
+
+    
+
+    
+
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+
+  </body>
+</html>
+

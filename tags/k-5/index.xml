@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>K 5 on Learn Robotics Academy</title>
+    <link>learnrobotics1.github.io/tags/k-5/</link>
+    <description>Recent content in K 5 on Learn Robotics Academy</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 14 Jun 2018 14:55:57 -0700</lastBuildDate>
+    
+	<atom:link href="learnrobotics1.github.io/tags/k-5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Robotics for Elementary Education</title>
+      <link>learnrobotics1.github.io/article/robotics-for-elementary-education/</link>
+      <pubDate>Thu, 14 Jun 2018 14:55:57 -0700</pubDate>
+      
+      <guid>learnrobotics1.github.io/article/robotics-for-elementary-education/</guid>
+      <description>Elementary Activities with Edison Course details Learn how to program the Meet Edison robot for K-5 elementary education. Hosted by Learn Robotics Instructor: Liz Miller All content can be used for educational purposes. Not for resale or commercial distribution without the prior authorization of Learn Robotics.
+Overview Robotics combines programming, electronics, and mechanics into a device that helps us perform tasks in the real-world. We will use the affordable Meet Edison Robot to complete interactive robotics labs.</description>
+    </item>
+    
+  </channel>
+</rss>
